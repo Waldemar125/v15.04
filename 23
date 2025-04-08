@@ -1,0 +1,11 @@
+def f(a, b, p):
+    if a == b and p == 5: return 1
+    if a > b or p > 5: return 0
+    return f(a + 2, b, p + 1) + f(a + 3, b, p + 1) + f(a * 2, b, p + 1)
+
+
+k = 0
+for b in range(11, 100000):
+    if f(10, b, 0) > 0:
+        k += 1
+print(k)
