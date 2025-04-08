@@ -1,0 +1,5 @@
+from re import findall
+with open('24.txt') as f:
+    s = f.readline()
+a = findall(r'B[1-6]+(?:[-*][1-6]+)+', s)
+print(len(max(a, key=len)))
