@@ -1,0 +1,5 @@
+s = 0
+for i in range(1686, 13277):
+    if len(str(i)) == len([j for j in str(i) if int(j) % 2 != 0]):
+        s += sum([int(j) for j in str(i) if int(j) % 2 != 0])
+print(s)
