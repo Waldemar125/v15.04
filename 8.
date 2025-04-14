@@ -1,4 +1,4 @@
 from itertools import permutations
 s = permutations('МАРИНА')
-k = len([i for i in list(s) if i[0] not in 'АИ'])
+k = len([i for i in set(list(s)) if i[0] not in 'АИ'])
 print(k)
